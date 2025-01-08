@@ -6,8 +6,12 @@ print(index)
 shifted = alphabet[index + shift]
 print(shifted)
 
+encrypted_text = ''
+
 for char in text.lower():
+    if char == ' ':
+        encrypted_text += char
     index = alphabet.find(char)
-    print(char, index)
     new_index = index + shift
-    new_char = alphabet[new_index]
+    encrypted_text += alphabet[new_index]
+    print('char:', char, 'encrypted text:', encrypted_text)
